@@ -1,5 +1,9 @@
 # Tesla Stock Price Prediction using SimpleRNN and LSTM
 
+## Author
+
+**Updesh Chauhan**
+
 This project predicts Tesla stock closing prices using Deep Learning models.  
 It uses historical Tesla stock data and compares SimpleRNN and LSTM models for stock price forecasting.
 
@@ -28,6 +32,85 @@ It uses historical Tesla stock data and compares SimpleRNN and LSTM models for s
 - Streamlit
 - Joblib
 
+## Project Overview
+
+## How to Run the Project
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repository-link>
+cd Stock_prediction
+```
+
+### 2. Install Required Libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the Streamlit App
+
+```bash
+streamlit run app.py
+```
+
+### 4. Upload Dataset
+
+After running the application:
+
+1. Open the local URL displayed in the terminal.
+2. Upload the Tesla stock CSV dataset.
+3. View the dataset preview.
+4. Generate stock price predictions.
+5. Visualize the Tesla closing price trend.
+
+---
+
+## Dataset Format
+
+The CSV file should contain at least the following column:
+
+```text
+Close
+```
+
+Recommended dataset columns:
+
+```text
+Date
+Open
+High
+Low
+Close
+Adj Close
+Volume
+```
+
+---
+
+## Model Details
+
+### SimpleRNN
+
+SimpleRNN is used as a baseline recurrent neural network model for stock price prediction. It learns sequential patterns from historical stock prices and provides a benchmark for comparison.
+
+### LSTM
+
+LSTM (Long Short-Term Memory) is used because it can capture long-term dependencies in time-series data more effectively than SimpleRNN. This makes it more suitable for stock price forecasting.
+
+---
+
+## Evaluation Metrics
+
+The models are evaluated using the following metrics:
+
+* Mean Squared Error (MSE)
+* Root Mean Squared Error (RMSE)
+* Mean Absolute Error (MAE)
+
+---
+
 ## Project Structure
 
 ```text
@@ -45,56 +128,3 @@ Stock_prediction/
 │
 └── notebooks/
     └── tesla_stock_prediction.ipynb
-
-How to Run the Project
-1. Clone the Repository
-git clone <your-repository-link>
-cd Stock_prediction
-2. Install Required Libraries
-pip install -r requirements.txt
-3. Run the Streamlit App
-streamlit run app.py
-4. Upload Dataset
-
-After running the app:
-
-Open the local URL shown in terminal.
-Upload the Tesla stock CSV file.
-The app will display the dataset preview.
-The app will predict the next day Tesla closing price.
-The closing price chart will also be shown.
-Dataset Format
-
-The CSV file should contain at least this column:
-
-Close
-
-Recommended columns:
-
-Date, Open, High, Low, Close, Adj Close, Volume
-Model Details
-
-The project uses:
-
-SimpleRNN
-
-SimpleRNN is used as a baseline recurrent neural network model for stock price prediction.
-
-LSTM
-
-LSTM is used because it can capture long-term dependencies in time-series data better than SimpleRNN.
-
-Evaluation Metrics
-
-The models are evaluated using:
-
-Mean Squared Error
-Root Mean Squared Error
-Mean Absolute Error
-Final Conclusion
-
-LSTM performed better than SimpleRNN because it can retain long-term time-series patterns more effectively. The model can predict Tesla's next closing price using the previous 60 days of closing price data.
-
-Author
-
-Updesh Chauhan
